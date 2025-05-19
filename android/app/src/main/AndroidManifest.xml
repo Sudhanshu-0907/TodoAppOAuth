@@ -21,6 +21,12 @@
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
+        <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="demo" android:host="dev-z5ofhx02imu7b8vf.us.auth0.com" />
+        </intent-filter>
       </activity>
     </application>
 </manifest>
