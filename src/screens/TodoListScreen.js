@@ -1,4 +1,3 @@
-// src/screens/TodoListScreen.js
 import React, {useEffect, useState} from 'react';
 import {
   View,

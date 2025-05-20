@@ -14,7 +14,6 @@ export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isCheckingAuth, setIsCheckingAuth] = useState(true);
 
-  // Load auth state on app start
   useEffect(() => {
     const checkAuth = async () => {
       const storedAuth = await AsyncStorage.getItem('isAuthenticated');
@@ -26,13 +25,12 @@ export default function App() {
     checkAuth();
   }, []);
 
-  // Update stored auth when changed
-  const handleAuthChange = async value => {
+  const handleAuthChange = async (value: boolean) => {
     setIsAuthenticated(value);
     await AsyncStorage.setItem('isAuthenticated', value.toString());
   };
 
-  if (isCheckingAuth) return null; // or splash screen
+  if (isCheckingAuth) return null;
 
   return (
     <Auth0Provider domain={config.domain} clientId={config.clientId}>

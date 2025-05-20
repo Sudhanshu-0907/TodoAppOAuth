@@ -1,4 +1,3 @@
-// src/screens/LoginScreen.js
 import React from 'react';
 import {View, Button, StyleSheet} from 'react-native';
 import {useAuth0} from 'react-native-auth0';
